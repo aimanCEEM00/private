@@ -1,0 +1,64 @@
+:root {
+--bg-color: #f7ebe1;
+--pink-main: #ff85a1;
+--pink-light: #fbc4d0;
+--pink-dark: #e05275;
+--window-bg: #fff5f7;
+--text-color: #4a4a4a;
+}
+* {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+background-color: var(--bg-color);
+height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+overflow: hidden;
+position: relative;
+}
+/* --- BACKGROUND PARTICLES --- */
+.particle {
+position: absolute;
+pointer-events: none;
+animation: float Up 4s linear infinite;
+opacity: 0.6;
+}
+@keyframes floatUp {
+0% { transform: translateY(100vh) scale(0); opacity: 0; }
+50% { opacity: 0.8; }
+100% { transform: translateY(-10vh) scale(1); opacity: 0; }
+}
+/* --- STAGE 1: ENVELOPE --- */
+.envelope-wrapper {
+display: flex;
+flex-direction: column;
+align-items: center;
+cursor: pointer;
+transition: transform 0.3s ease;
+}
+.envelope-wrapper:hover {
+transform: scale(1.05);
+}
+.envelope-text {
+margin-bottom: 15px;
+font-size: 1.2rem;
+color: var(--pink-dark);
+font-weight: bold;
+background: white;
+padding: 8px 20px;
+border-radius: 20px;
+box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+.envelope {
+position: relative;
+width: 280px;
+height: 180px;
+background: var(--pink-light);
+border-radius: 0 0 10px 10px;
+box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+display
